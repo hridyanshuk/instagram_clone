@@ -2,10 +2,11 @@
 //ignore_for_file: prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
-
+import 'package:instagram_clone/authorisation/login.dart';
+import 'package:instagram_clone/authorisation/signup.dart';
 class Choices extends StatelessWidget {
   const Choices({Key? key}) : super(key: key);
-
+  static const id="/auth/choices.dart";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,7 +32,9 @@ class Choices extends StatelessWidget {
               Expanded(child: Container(), flex: 20,),
               Expanded(
                 child: FlatButton(
-                  onPressed: (){},
+                  onPressed: (){
+                    Navigator.pushNamed(context, Login.id);
+                  },
                   child: Text(
                     "Log in",
                     style: TextStyle(
@@ -49,7 +52,9 @@ class Choices extends StatelessWidget {
               Expanded(child: Container(), flex: 7,),
               Expanded(
                 child: OutlinedButton(
-                  onPressed: (){},
+                  onPressed: (){
+                    Navigator.pushNamed(context, SignUp.id);
+                  },
                   child: Text("Sign Up"),
                   style: OutlinedButton.styleFrom(
                       shape: RoundedRectangleBorder(

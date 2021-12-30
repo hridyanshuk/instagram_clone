@@ -1,8 +1,10 @@
 //ignore_for_file: prefer_const_constructors
 //ignore_for_file: prefer_const_literals_to_create_immutables
 import 'package:flutter/material.dart';
+import 'package:instagram_clone/authorisation/login.dart';
 class SignUp extends StatefulWidget {
   const SignUp({Key? key}) : super(key: key);
+  static const id="/auth/signup.dart";
 
   @override
   _SignUpState createState() => _SignUpState();
@@ -18,6 +20,9 @@ class _SignUpState extends State<SignUp> {
       child: Scaffold(
         backgroundColor: Colors.white,
         appBar: AppBar(
+          iconTheme: IconThemeData(
+            color: Colors.blue,
+          ),
           backgroundColor: Colors.white,
           elevation: 0.0,
         ),
@@ -162,6 +167,7 @@ class _SignUpState extends State<SignUp> {
                       height: 47.0,
                       child: TextField(
                         decoration: InputDecoration(
+
                           enabledBorder: OutlineInputBorder(
                               borderSide: BorderSide(
                                 width: 1.0,
@@ -179,14 +185,13 @@ class _SignUpState extends State<SignUp> {
                           filled: true,
 
                           fillColor: Colors.grey[100],
-
+                          focusColor: Colors.white,
                           labelText: "Email ID",
 
                           floatingLabelStyle: TextStyle(
                             color: Colors.blue,
                           ),
 
-                          focusColor: Colors.white,
 
                           labelStyle: TextStyle(
                             color: Colors.grey[400],
@@ -218,31 +223,33 @@ class _SignUpState extends State<SignUp> {
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  mainAxisSize: MainAxisSize.max,
                   children: [
-                    SizedBox(
-                      width: 150.0,
+                    Expanded(
+                      flex: 3,
                       child: Divider(
-                        thickness: 1.0,
-                        height: 80.0,
                         color: Colors.grey,
+                        height: 80.0,
                       ),
                     ),
-                    Text("OR", style: TextStyle(color: Colors.grey),),
-                    SizedBox(
-                      width: 150.0,
+                    Expanded(flex: 1, child: Text("OR", style:TextStyle(color: Colors.grey), textAlign: TextAlign.center,)),
+                    Expanded(
+                      flex: 3,
                       child: Divider(
-                        thickness: 1.0,
-                        height: 80.0,
                         color: Colors.grey,
+                        height: 80.0,
                       ),
-                    )
+                    ),
                   ],
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("Have an account?"),
-                    TextButton(onPressed: (){}, child: Text("Log in"))
+                    TextButton(onPressed: (){
+                      Navigator.pop(context);
+                      Navigator.pushNamed(context, Login.id);
+                    }, child: Text("Log in"))
                   ],
                 )
 

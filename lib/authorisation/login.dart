@@ -1,12 +1,12 @@
 //ignore_for_file: prefer_const_constructors
 //ignore_for_file: prefer_const_literals_to_create_immutables
-import 'package:flutter/src/widgets/focus_manager.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+import 'package:instagram_clone/Screens/homescreen.dart';
+import 'package:instagram_clone/authorisation/signup.dart';
 
 class Login extends StatefulWidget {
   const Login({Key? key}) : super(key: key);
-
+  static const id="/auth/login.dart";
   @override
   _LoginState createState() => _LoginState();
 }
@@ -19,6 +19,9 @@ class _LoginState extends State<Login> {
       child: Scaffold(
         backgroundColor: Colors.white,
         appBar: AppBar(
+          iconTheme: IconThemeData(
+            color: Colors.blue,
+          ),
           elevation: 0.0,
           backgroundColor: Colors.transparent,
         ),
@@ -106,7 +109,9 @@ class _LoginState extends State<Login> {
                       height: 46.0,
                       child: TextButton(
 
-                        onPressed: (){}, child: Text("Log in", style: TextStyle(color: Colors.white),),
+                        onPressed: (){
+                          Navigator.pushNamedAndRemoveUntil(context, HomeScreen.id, (route) => false);
+                        }, child: Text("Log in", style: TextStyle(color: Colors.white),),
                         style: TextButton.styleFrom(
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(8.0),
@@ -125,16 +130,16 @@ class _LoginState extends State<Login> {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   mainAxisSize: MainAxisSize.max,
                   children: [
-                    SizedBox(
-                      width: 150.0,
+                    Expanded(
+                      flex: 3,
                       child: Divider(
                         color: Colors.grey,
                         height: 80.0,
                       ),
                     ),
-                    Text("OR", style:TextStyle(color: Colors.grey)),
-                    SizedBox(
-                      width: 150.0,
+                    Expanded(flex: 1, child: Text("OR", style:TextStyle(color: Colors.grey), textAlign: TextAlign.center,)),
+                    Expanded(
+                      flex: 3,
                       child: Divider(
                         color: Colors.grey,
                         height: 80.0,
@@ -147,7 +152,10 @@ class _LoginState extends State<Login> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("Don't have an account?", style: TextStyle(color: Colors.grey),),
-                    TextButton(onPressed: (){}, child: Text("Sign Up")),
+                    TextButton(onPressed: (){
+                      Navigator.pop(context);
+                      Navigator.pushNamed(context, SignUp.id);
+                    }, child: Text("Sign Up")),
                   ],
                 )
 
