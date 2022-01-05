@@ -37,7 +37,7 @@ class _ExploreState extends State<Explore> {
               )
             ],
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 3,
+              crossAxisCount: 2,
             )
           )
         ],

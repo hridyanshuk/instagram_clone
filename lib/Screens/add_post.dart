@@ -11,6 +11,10 @@ class AddPost extends StatefulWidget {
 class _AddPostState extends State<AddPost> {
   @override
   Widget build(BuildContext context) {
-    return Text("Add Post");
+    return Scaffold(
+      appBar: AppBar(elevation: 0.0,
+          backgroundColor: Colors.transparent,),
+      body: Text("Add Post"),
+    );
   }
 }

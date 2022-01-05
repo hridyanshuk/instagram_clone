@@ -11,6 +11,6 @@ class ActivityPage extends StatefulWidget {
 class _ActivityPageState extends State<ActivityPage> {
   @override
   Widget build(BuildContext context) {
-    return Text("Activity Page");
+    return Scaffold(appBar: AppBar(elevation: 0,backgroundColor: Colors.transparent,),body: Text("Activity Page"));
   }
 }

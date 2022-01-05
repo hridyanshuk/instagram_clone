@@ -11,6 +11,6 @@ class ProfilePage extends StatefulWidget {
 class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
-    return Text("Profile Page");
+    return Scaffold(body: Text("Profile Page"),appBar: AppBar(elevation: 0,backgroundColor: Colors.transparent,),);
   }
 }
