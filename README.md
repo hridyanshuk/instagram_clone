@@ -4,13 +4,10 @@ I am currently working on this project by following the Flutter course material 
 
 <b>Currently the following pages have been made</b>
 
-<img src="readmeAssets\Flutter_pics\choices.jpg">
+<img src="readmeAssets\Flutter_pics\choices.jpg" width=30%>
+<img src="readmeAssets\Flutter_pics\login.jpg" width=30%>
+<img src="readmeAssets\Flutter_pics\signup.jpg" width=30%>
 <br>
-<img src="readmeAssets\Flutter_pics\login.jpg">
-<br>
-<img src="readmeAssets\Flutter_pics\signup.jpg">
-<br>
-<img src="readmeAssets\Flutter_pics\home1.jpg">
-<br>
-<img src="readmeAssets\Flutter_pics\home2.jpg">
+<img src="readmeAssets\Flutter_pics\home1.jpg" width=30%>
+<img src="readmeAssets\Flutter_pics\home2.jpg" width=30%>
 <br>
