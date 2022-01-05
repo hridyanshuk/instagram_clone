@@ -82,18 +82,43 @@ class Posts extends StatelessWidget {
           ),
         ),
         Image(image: AssetImage(imageURL)),
-        SizedBox(
-          height: 40.0,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              ImageIcon(AssetImage("assets/imageIcons/heart.png"), size: 30.0,),
-              ImageIcon(AssetImage("assets/imageIcons/comment.png"), size: 35.0,),
-              ImageIcon(AssetImage("assets/imageIcons/directMsg.png"), size: 35.0,)
-            ],
+        Padding(
+          padding: EdgeInsets.only(left: 10.0),
+          child: SizedBox(
+            height: 40.0,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(right: 20.0),
+                  child: ImageIcon(AssetImage("assets/imageIcons/likeIcon.png"), size: 27.0,),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(right: 20.0),
+                  child: ImageIcon(AssetImage("assets/imageIcons/commentIcon.png"), size: 29.0,),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(right: 20.0),
+                  child: ImageIcon(AssetImage("assets/imageIcons/dmIcon.png"), size: 27.0,),
+                )
+              ],
+            ),
           ),
         ),
-        Text(username+" "+caption)
+        Padding(
+          padding: const EdgeInsets.only(left: 10.0, right: 10.0, bottom: 10.0),
+          child: RichText(
+            text: TextSpan(
+              style: TextStyle(
+                color: Colors.black
+              ),
+              children: [
+                TextSpan(text:username+" ", style: TextStyle(fontWeight: FontWeight.bold)),
+                TextSpan(text:caption, )
+              ]
+            ),
+          ),
+        )
       ],
     );
   }

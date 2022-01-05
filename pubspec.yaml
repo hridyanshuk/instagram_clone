@@ -59,21 +59,26 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-   - assets/unreadStory.jpg
-   - assets/Testing/ProfileImages/dp1.jpg
-   - assets/Testing/ProfileImages/dp2.jpeg
-   - assets/Testing/ProfileImages/dp3.jpeg
-   - assets/Testing/ProfileImages/dp4.jpeg
-   - assets/Testing/ProfileImages/dp5.jpeg
-   - assets/Testing/ProfileImages/dp6.jpeg
-   - assets/imageIcons/directMsg2.png
-   - assets/imageIcons/directMsg.png
-   - assets/imageIcons/comment.png
-   - assets/imageIcons/heart.png
-   - assets/imageIcons/liked.png
-   - assets/imageIcons/like.png
-   - assets/imageIcons/comment1.png
-   - assets/imageIcons/heart-outline.svg
+    - assets/imageIcons/likeIcon.png
+    - assets/imageIcons/commentIcon.png
+    - assets/imageIcons/dmIcon.png
+    - assets/unreadStory.jpg
+    - assets/Testing/ProfileImages/dp1.jpg
+    - assets/Testing/ProfileImages/dp2.jpeg
+    - assets/Testing/ProfileImages/dp3.jpeg
+    - assets/Testing/ProfileImages/dp4.jpeg
+    - assets/Testing/ProfileImages/dp5.jpeg
+    - assets/Testing/ProfileImages/dp6.jpeg
+    - assets/imageIcons/likeIconFilledBlack.png
+    - assets/imageIcons/likeIconFilledPink.png
+#   - assets/imageIcons/directMsg2.png
+#   - assets/imageIcons/directMsg.png
+#   - assets/imageIcons/comment.png
+#   - assets/imageIcons/heart.png
+#   - assets/imageIcons/liked.png
+#   - assets/imageIcons/like.png
+#   - assets/imageIcons/comment1.png
+#   - assets/imageIcons/heart-outline.svg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

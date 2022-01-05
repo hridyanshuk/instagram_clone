@@ -2,6 +2,7 @@
 //ignore_for_file: prefer_const_literals_to_create_immutables
 import 'package:flutter/material.dart';
 import 'package:instagram_clone/Screens/homescreen.dart';
+import 'package:instagram_clone/Screens/nav_bar_screen.dart';
 import 'package:instagram_clone/authorisation/choices.dart';
 import 'package:instagram_clone/authorisation/login.dart';
 import 'package:instagram_clone/authorisation/signup.dart';
@@ -26,7 +27,8 @@ class MyApp extends StatelessWidget {
         Login.id: (context) => Login(),
         SignUp.id: (context) => SignUp(),
         Choices.id: (context) => Choices(),
-        HomeScreen.id: (context) => HomeScreen(),
+        NavBarScreen.id: (context) => NavBarScreen(),
+
       },
       home: Choices(),
     );

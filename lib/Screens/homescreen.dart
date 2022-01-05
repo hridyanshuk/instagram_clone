@@ -58,7 +58,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
         ),
         actions: [
-          ImageIcon(AssetImage("assets/imageIcons/directMsg2.png"), color: Colors.black, size:32.0)
+          ImageIcon(AssetImage("assets/imageIcons/dmIcon.png"), color: Colors.black, size:32.0)
         ],
       ),
 

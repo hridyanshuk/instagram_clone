@@ -2,6 +2,7 @@
 //ignore_for_file: prefer_const_literals_to_create_immutables
 import 'package:flutter/material.dart';
 import 'package:instagram_clone/Screens/homescreen.dart';
+import 'package:instagram_clone/Screens/nav_bar_screen.dart';
 import 'package:instagram_clone/authorisation/signup.dart';
 
 class Login extends StatefulWidget {
@@ -110,7 +111,7 @@ class _LoginState extends State<Login> {
                       child: TextButton(
 
                         onPressed: (){
-                          Navigator.pushNamedAndRemoveUntil(context, HomeScreen.id, (route) => false);
+                          Navigator.pushNamedAndRemoveUntil(context, NavBarScreen.id, (route) => false);
                         }, child: Text("Log in", style: TextStyle(color: Colors.white),),
                         style: TextButton.styleFrom(
                           shape: RoundedRectangleBorder(
