@@ -6,7 +6,7 @@ import 'package:instagram_clone/Screens/nav_bar_screen.dart';
 import 'package:instagram_clone/authorisation/choices.dart';
 import 'package:instagram_clone/authorisation/login.dart';
 import 'package:instagram_clone/authorisation/signup.dart';
-import 'package:instagram_clone/routes.dart';
+import 'package:instagram_clone/constants.dart';
 void main() {
   runApp(const MyApp());
 }
