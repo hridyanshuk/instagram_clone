@@ -7,6 +7,7 @@ import 'package:instagram_clone/Screens/add_post.dart';
 import 'package:instagram_clone/Screens/explore.dart';
 import 'package:instagram_clone/Screens/homescreen.dart';
 import 'package:instagram_clone/Screens/profile_page.dart';
+import 'package:instagram_clone/constants.dart';
 
 class NavBarScreen extends StatefulWidget {
   const NavBarScreen({Key? key}) : super(key: key);
@@ -23,7 +24,13 @@ class _NavBarScreenState extends State<NavBarScreen> {
     Explore(),
     AddPost(),
     ActivityPage(),
-    ProfilePage(),
+    ProfilePage(
+      username: user1,
+      bio: bio1,
+      nofFollowers: 74,
+      nofFollowing: 85,
+      nofPosts: 0,
+    ),
   ];
 
   final homeIconStates=[

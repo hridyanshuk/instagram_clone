@@ -137,3 +137,73 @@ class DisplayPic extends StatelessWidget {
     );
   }
 }
+
+class DisplayPicture extends StatelessWidget {
+  const DisplayPicture({
+    Key? key,
+    this.story=false,
+    this.network=false,
+    required this.imageLink,
+    this.read=false,
+    this.radius=30,
+  }) : super(key: key);
+  final bool story;
+  final bool network;
+  final String imageLink;
+  final bool read;
+  final double radius;
+
+
+  @override
+  Widget build(BuildContext context) {
+    final displayPictureStates=[
+      CircleAvatar(
+        radius: radius+0.0667*radius,
+        backgroundImage: AssetImage("assets/unreadStory.jpg"),
+        child: CircleAvatar(
+          backgroundColor: Colors.white,
+          radius: radius+0.0333*radius,
+          child: CircleAvatar(
+            backgroundImage: returnImageProvider(network: network, imageLink: imageLink),
+          ),
+        ),
+      ),
+      CircleAvatar(
+        radius: radius+0.0667*radius,
+        backgroundColor: Colors.grey,
+        child: CircleAvatar(
+          backgroundColor: Colors.white,
+          radius: radius+0.0333*radius,
+          child: CircleAvatar(
+            backgroundImage: returnImageProvider(network: network, imageLink: imageLink),
+          ),
+        ),
+      ),
+      CircleAvatar(
+        radius: radius,
+        backgroundImage: returnImageProvider(network: network, imageLink: imageLink),
+      )
+    ];
+    if(story)
+      {
+        if(read)
+          {
+            return displayPictureStates[1];
+          }
+        return displayPictureStates[0];
+      }
+    return displayPictureStates[2];
+  }
+}
+
+ImageProvider returnImageProvider({
+  required network,
+  required imageLink,
+})
+{
+  if(network)
+    {
+      return NetworkImage(imageLink);
+    }
+  return AssetImage(imageLink);
+}

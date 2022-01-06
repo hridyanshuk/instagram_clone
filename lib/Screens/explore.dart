@@ -58,6 +58,7 @@ class _ExploreState extends State<Explore> {
               Expanded(
 
                 child: GridView.count(
+                  childAspectRatio: 1,// width/height
                   crossAxisCount: 3,
                   mainAxisSpacing: 2.0,
                   crossAxisSpacing: 2.0,
@@ -99,9 +100,8 @@ class PostThumbnail extends StatelessWidget {
   final String postLink;
   @override
   Widget build(BuildContext context) {
-    return FittedBox(
-      fit: BoxFit.cover,
-      child: Image(image: AssetImage(postLink))
-    );
+    return Image(
+      image: AssetImage(postLink),
+      fit: BoxFit.cover);
   }
 }
