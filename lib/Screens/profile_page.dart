@@ -1,8 +1,11 @@
 //ignore_for_file: prefer_const_constructors
 //ignore_for_file: prefer_const_literals_to_create_immutables
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:instagram_clone/constants.dart';
 import 'package:instagram_clone/widgets/display_pic.dart';
+import 'package:instagram_clone/widgets/post_thumbnails.dart';
+import 'dart:math';
 class ProfilePage extends StatefulWidget {
   const ProfilePage({
     Key? key,
@@ -22,6 +25,7 @@ class ProfilePage extends StatefulWidget {
   final int nofFollowing;
   final String username;
   final String bio;
+
   @override
   _ProfilePageState createState() => _ProfilePageState();
 }
@@ -30,6 +34,7 @@ class _ProfilePageState extends State<ProfilePage> {
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
 
       body: ListView(
@@ -88,7 +93,17 @@ class _ProfilePageState extends State<ProfilePage> {
             Expanded(child: Container(), flex: 1,),
           ],
         ),
-
+       SizedBox(
+         height: 50.0,
+       ),
+       GridView.count(
+         physics: NeverScrollableScrollPhysics(), // to disable GridView's scrolling
+         shrinkWrap: true, // You won't see infinite size error
+         crossAxisCount: 3,
+         crossAxisSpacing: 2.0,
+         mainAxisSpacing: 2.0,
+         children: [for(var i=0 ; i<widget.nofPosts ; i++) PostThumbnail(postLink: "assets/Testing/ProfileImages/dp${(i%5)+2}.jpeg"),],
+       )
       ]
       ),
       appBar: AppBar(

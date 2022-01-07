@@ -29,7 +29,7 @@ class _NavBarScreenState extends State<NavBarScreen> {
       bio: bio1,
       nofFollowers: 74,
       nofFollowing: 85,
-      nofPosts: 0,
+      nofPosts: 25,
     ),
   ];
 

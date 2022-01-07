@@ -2,6 +2,7 @@
 //ignore_for_file: prefer_const_literals_to_create_immutables
 import 'package:flutter/material.dart';
 import 'package:instagram_clone/constants.dart';
+import 'package:instagram_clone/widgets/post_thumbnails.dart';
 class Explore extends StatefulWidget {
   const Explore({Key? key}) : super(key: key);
 
@@ -25,10 +26,10 @@ class _ExploreState extends State<Explore> {
             height: 45.0,
             child: TextField(
 
+
               enableInteractiveSelection: true,
 
               decoration: InputDecoration(
-
                 fillColor: Color(0xFFE9E9EA),
                 enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(15.0),
@@ -44,6 +45,7 @@ class _ExploreState extends State<Explore> {
                 ),
                 //focusColor: Color(0xff9d9fa1),
                 labelText: "Search",
+                prefixIcon: Icon(Icons.search),
                 floatingLabelBehavior :FloatingLabelBehavior.never,
                 filled: true,
               ),
@@ -89,19 +91,5 @@ class _ExploreState extends State<Explore> {
         ),
       ),
     );
-  }
-}
-
-class PostThumbnail extends StatelessWidget {
-  const PostThumbnail({
-    Key? key,
-    required this.postLink,
-  }) : super(key: key);
-  final String postLink;
-  @override
-  Widget build(BuildContext context) {
-    return Image(
-      image: AssetImage(postLink),
-      fit: BoxFit.cover);
   }
 }
