@@ -13,3 +13,4 @@ I have learnt how to make the UI of an app and am now learning Firebase to work 
 <br>
 <img src="readmeAssets\Flutter_pics\home1.jpg" width=30%>  <img src="readmeAssets\Flutter_pics\home2.jpg" width=30%>
 <br>
+<img src="readmeAssets\Flutter_pics\explore.jpg" width=30%>  <img src="readmeAssets\Flutter_pics\profile.jpg" width=30%>

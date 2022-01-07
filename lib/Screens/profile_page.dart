@@ -34,15 +34,7 @@ class _ProfilePageState extends State<ProfilePage> {
 
       body: ListView(
         children: [
-          Center(
-            child: Text(
-              widget.username,
-              style: TextStyle(
-                fontSize: 25.0,
-                fontWeight: FontWeight.bold
-              ),
-            ),
-          ),
+
           Padding(
             padding: const EdgeInsets.only(bottom: 10.0),
             child: Row(
@@ -96,12 +88,22 @@ class _ProfilePageState extends State<ProfilePage> {
             Expanded(child: Container(), flex: 1,),
           ],
         ),
-        
+
       ]
       ),
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.transparent,
+        title: Center(
+          child: Text(
+            widget.username,
+            style: TextStyle(
+                fontSize: 25.0,
+                fontWeight: FontWeight.bold,
+              color: Colors.black
+            ),
+          ),
+        ),
       ),
     );
   }
